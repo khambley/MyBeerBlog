@@ -35,7 +35,7 @@ namespace MyBeerBlog.Tests.Controllers
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.IsNotNull(result.Model); //will check that the model is being passed to the view
         }
 
         [TestMethod]
